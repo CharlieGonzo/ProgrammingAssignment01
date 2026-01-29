@@ -24,6 +24,10 @@ public class  Main {
         int targetId = 108;
         Ticket found = board.findByIdBinarySearch(targetId); // TODO #4
         System.out.println("\nSearch result for ID " + targetId + ": " + (found == null ? "NOT FOUND" : found));
+        // A little extra test
+        targetId = 109;
+        found = board.findByIdBinarySearch(targetId);
+        System.out.println("\nSearch result for ID " + targetId + ": " + (found == null ? "NOT FOUND" : found));
 
         // Demonstrate method overloading (TODO #1)
         Ticket t = board.get(0);

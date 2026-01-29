@@ -87,7 +87,7 @@ public class TicketBoard {
     public Ticket findByIdBinarySearch(int id) {
         // TODO #5
         sortByIdAsc(); // Needs to be sorted for Binary Search.
-        int low = 0,high = size;
+        int low = 0,high = size-1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
             Ticket current = tickets[low];
