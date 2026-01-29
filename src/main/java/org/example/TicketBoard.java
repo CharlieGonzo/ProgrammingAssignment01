@@ -82,9 +82,22 @@ public class TicketBoard {
     // Precondition: tickets are sorted by ID ASCENDING.
     // Return the Ticket with matching id, or null if not found.
     // Implement iterative binary search on the array.
+    // Using Iterative solution for Binary Search. Time: O(log n) Space: O(1)
     // ---------------------------------------------------------
     public Ticket findByIdBinarySearch(int id) {
         // TODO #5
+        int low = 0,high = size;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            Ticket current = tickets[low];
+
+            if(current.getId() == id)
+                return current;
+            if(current.getId() < id)
+                low = mid + 1;
+            else
+                high = mid - 1;
+        } // End While
         return null;
     }
 
